@@ -33,7 +33,7 @@ setup(
     # Console entry points to multiple nodes/scripts
     entry_points={
         'console_scripts': [
-            'lidar_node = den_rob_package.lidar_node:main',
+            'odom_publisher = den_rob_package.odom_publisher:main',
             'motor_controller = den_rob_package.motor_controller:main',
             'sensor_listener = den_rob_package.sensor_listener:main',
         ],
