@@ -21,11 +21,13 @@ def generate_launch_description():
         ),
 
         # Start SLAM Toolbox (online async mode)
-        Node(
+         Node(
             package='slam_toolbox',
-            executable='sync_slam_toolbox_node',  # or 'async_slam_toolbox_node' if you prefer
+            executable='sync_slam_toolbox_node',
             name='slam_toolbox',
             output='screen',
-            parameters=[{'use_sim_time': False}]
-        )
+            parameters=[{'use_sim_time': False},
+                        {'use_odometry': True}],
+            remappings=[('scan', '/scan')]
+        ),
     ])
