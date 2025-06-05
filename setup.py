@@ -1,26 +1,22 @@
-from setuptools import setup
-from glob import glob
-import os
+from setuptools import setup, find_packages
 
 package_name = 'denstista_ros2_drive'
 
 setup(
-    name=package_name,
-    version='0.1.0',
-    packages=[package_name],
+     name=package_name,
+    version='0.0.0',
+    packages=find_packages(where='.'),  # Automatically find the nested package
+    package_dir={'': '.'},              # Current dir is the root
     data_files=[
         ('share/ament_index/resource_index/packages',
-            ['resource/' + package_name]),
+         ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        (os.path.join('share', package_name, 'launch'), glob('launch/*.py')),
-        (os.path.join('share', package_name, 'config'), glob('config/*.yaml')),
-        (os.path.join('share', package_name, 'scripts'), glob('scripts/*.sh')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='Dominic Digiacomo',
-    maintainer_email='dominicdigiacomo16@gmail.com',
-    description='Advanced ROS 2 package for Project Dentista robot software stack.',
+    maintainer='Your Name',
+    maintainer_email='your.email@example.com',
+    description='ROS2 package for denstista drive',
     license='MIT',
     tests_require=['pytest'],
     entry_points={
