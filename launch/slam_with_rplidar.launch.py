@@ -18,7 +18,7 @@ def generate_launch_description():
         Node(
             package='denstista_ros2_drive',
             executable='odom_publisher',
-            name='odom_publisher',
+            name='odom_publisher_left',
             output='screen'
         ),
 
