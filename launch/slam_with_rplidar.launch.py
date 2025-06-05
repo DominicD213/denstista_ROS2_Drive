@@ -24,10 +24,13 @@ def generate_launch_description():
 
         Node(
             package='rplidar_ros',
-            executable='rplidar_composition',
+            executable='rplidar_node',  # Changed from 'rplidar_composition'
             name='rplidar',
             output='screen',
-            parameters=[{'frame_id': 'laser'}]
+            parameters=[{
+                'serial_port': '/dev/ttyUSB0',  # or /dev/rplidar if you added udev rules
+                'frame_id': 'laser'
+            }]
         ),
 
         Node(
