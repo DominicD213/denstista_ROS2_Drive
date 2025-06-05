@@ -5,7 +5,7 @@ import os
 from launch.actions import ExecuteProcess
 
 def generate_launch_description():
-    my_package_share_dir = get_package_share_directory('denstista_ROS2_Drive')
+    my_package_share_dir = get_package_share_directory('denstista_ros2_drive')
     slam_config_path = os.path.join(my_package_share_dir, 'config', 'slam_config.yaml')
     script_path = os.path.join(my_package_share_dir, 'scripts','create_map_dir.sh')
 
@@ -16,7 +16,7 @@ def generate_launch_description():
             output='screen'
         ),
         Node(
-            package='denstista_ROS2_Drive',
+            package='denstista_ros2_drive',
             executable='odom_publisher',
             name='odom_publisher',
             output='screen'
