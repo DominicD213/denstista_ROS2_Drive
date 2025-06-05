@@ -24,14 +24,18 @@ def generate_launch_description():
 
         Node(
             package='rplidar_ros',
-            executable='rplidar_node',  # Changed from 'rplidar_composition'
+            executable='rplidar_node',
             name='rplidar',
             output='screen',
             parameters=[{
-                'serial_port': '/dev/ttyUSB0',  # or /dev/rplidar if you added udev rules
-                'frame_id': 'laser'
-            }]
+                'serial_port': '/dev/ttyUSB0',
+                'serial_baudrate': 115200,
+                'frame_id': 'laser',
+                'inverted': False,
+                'angle_compensate': True,
+            }],
         ),
+
 
         Node(
             package='slam_toolbox',
