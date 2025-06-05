@@ -1,16 +1,17 @@
-ros__parameters:
-  use_sim_time: false               # Set to true if using simulation clock
-  scan_topic: scan                  # Laser scan topic
-  map_frame: map                   # Global map frame
-  odom_frame: odom                 # Odometry frame
-  base_frame: base_link            # Robot base frame
-  mode: mapping                   # Operation mode: mapping, localization, etc.
-  use_odometry: true               # Fuse odometry data
-  save_map_on_shutdown: true       # Automatically save map when node shuts down
-  map_save_dir: "/home/dominicd/maps"   # Directory to save maps (adjust as needed)
-  map_file_name: "my_robot_map"   # Base filename for saved maps
-  max_laser_range: 12.0            # Max range for lidar (adjust to your lidar specs)
-  max_laser_angle: 2.356           # Max angle (radians) of laser scan (135 degrees)
-  use_scan_matching: true          # Use scan matching for better pose estimates
-  scan_buffer_size: 10             # Number of scans to buffer for processing
-  max_processing_time_sec: 0.05    # Max processing time per update (seconds)
+slam_toolbox_node:
+  ros__parameters:
+    use_sim_time: false               # Set to true if using simulation clock
+    scan_topic: scan                  # Laser scan topic
+    map_frame: map                   # Global map frame
+    odom_frame: odom                 # Odometry frame
+    base_frame: base_link            # Robot base frame
+    mode: mapping                   # Operation mode: mapping, localization, etc.
+    use_odometry: true               # Fuse odometry data
+    save_map_on_shutdown: true       # Automatically save map when node shuts down
+    map_save_dir: "/home/dominicd/maps"   # Directory to save maps (adjust as needed)
+    map_file_name: "my_robot_map"   # Base filename for saved maps
+    max_laser_range: 12.0            # Max range for lidar (adjust to your lidar specs)
+    max_laser_angle: 2.356           # Max angle (radians) of laser scan (135 degrees)
+    use_scan_matching: true          # Use scan matching for better pose estimates
+    scan_buffer_size: 10             # Number of scans to buffer for processing
+    max_processing_time_sec: 0.05    # Max processing time per update (seconds)

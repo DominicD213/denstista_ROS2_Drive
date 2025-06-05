@@ -6,7 +6,7 @@ from launch.actions import ExecuteProcess
 
 def generate_launch_description():
     my_package_share_dir = get_package_share_directory('denstista_ros2_drive')
-    slam_config_path = os.path.join(my_package_share_dir, 'config', 'slam_config.yaml')
+    slam_config_path = os.path.join(my_package_share_dir, 'config', 'slam_toolbox.yaml')
     script_path = os.path.join(my_package_share_dir, 'scripts','create_map_dir.sh')
 
     return LaunchDescription([

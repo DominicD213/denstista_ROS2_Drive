@@ -15,11 +15,13 @@ setup(
     },
     # This is the key part: explicitly install launch files in the share folder
     data_files=[
-        ('share/ament_index/resource_index/packages',
-         ['resource/' + package_name]),
-        ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/launch', ['launch/slam_with_rplidar.launch.py']),
-    ],
+    ('share/ament_index/resource_index/packages',
+     ['resource/' + package_name]),
+    ('share/' + package_name, ['package.xml']),
+    ('share/' + package_name + '/launch', ['launch/slam_with_rplidar.launch.py']),
+    ('share/' + package_name + '/scripts', ['scripts/create_map_dir.sh']),
+    ('share/' + package_name + '/config', ['config/slam_toolbox.yaml']),
+],
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='Your Name',
