@@ -9,9 +9,11 @@ setup(
     package_dir={'': '.'},              # Current dir is the root
     data_files=[
         ('share/ament_index/resource_index/packages',
-         ['resource/' + package_name]),
+        ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/launch', ['launch/slam_with_rplidar.launch.py']),
     ],
+
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='Your Name',
