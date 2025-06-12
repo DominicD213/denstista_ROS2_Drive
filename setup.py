@@ -32,7 +32,8 @@ setup(
     entry_points={
         'console_scripts': [
             'odom_publisher = denstista_ros2_drive.odom_publisher:main',
-            'OmniSerialBridge= denstista_ros2_drive.OmniSerialBridge:main',
+            'omni_serial_bridge= denstista_ros2_drive.omni_serial_bridge:main',
+            'obstacle_avoider = denstista_ros2_drive.obstacle_avoider:main',
         ],
     },
 )

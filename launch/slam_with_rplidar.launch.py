@@ -45,7 +45,8 @@ def generate_launch_description():
             parameters=[slam_config_path, {'use_sim_time': False, 'use_odometry': True}],
             remappings=[('scan', '/scan')]
         ),
-
+        
+        #Possible causing /scan node issues
         Node(
             package='tf2_ros',
             executable='static_transform_publisher',
