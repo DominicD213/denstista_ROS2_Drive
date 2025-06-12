@@ -14,6 +14,8 @@
   <depend>sensor_msgs</depend>
   <depend>nav_msgs</depend>
 
+  <exec_depend>std_msgs</exec_depend>
+
   <!--
   If you need tf_transformations as a ROS package, add it here.
   Otherwise, manage its installation via pip or system package manager.
